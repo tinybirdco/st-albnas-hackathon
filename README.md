@@ -8,6 +8,26 @@ The "St. Albnas" problem has become quite a meme on the internet. It seems to ha
 
 The meme captures a well known issue with data quality: Free-text fields aren't consistent!
 
+## The Solution
+
+This solution uses [Marvin](https://www.askmarvin.ai) to write an AI Function that cleans location data. This is the entire function:
+
+```python
+@ai_fn
+def fix_typos(locations: list[str]) -> list[str]:
+    """Fix any typos in the list of locations, returning a corrected list"""
+```
+
+After loading the data and calling this function, the resulting dataset is 100% clean. 
+
+### Running the solution
+
+1. Install Marvin: `pip install marvin`
+2. Set your OpenAI API key as `MARVIN_OPENAI_API_KEY` or edit `marvin-solution.py` to add your API key
+3. run `python marvin-solution.py`
+4. ???
+5. profit 
+
 ## The Goal
 Write some code (SQL, GPT, regex, whatever you want) that will accurately, precisely, and consistently converge all of the elements in the [`positives.txt`](/positives.txt) file to the correct spelling: `St. Albans`.
 
@@ -45,3 +65,4 @@ Also, as an incentive to score well, we'll tweet the final leaderboard when this
 
 ## Need help?
 Join our [Community Slack](https://www.tinybird.co/join-our-slack-community)!
+
