@@ -26,7 +26,7 @@ The code should repeatably converge as many of the entries as possible into the 
 - Tinybird employees may not participate
 
 ## Scoring
-Aim for [Accuracy (ACC)!](https://en.wikipedia.org/wiki/Accuracy_and_precision#In_binary_classification), measured as (true positives + true negatives) / (all possibilities).
+Aim for [Accuracy (ACC)](https://en.wikipedia.org/wiki/Accuracy_and_precision#In_binary_classification), measured as (true positives + true negatives) / (all possibilities).
 
 For example, a submission that accurately converts 15 out of the 17 elements in `positives.txt` and accurately ignores 24 out of the 25 elements in `negatives.txt` would score (15 + 24) / (17 + 25) = 92.8%
 
@@ -40,8 +40,8 @@ Also, as an incentive to score well, we'll tweet the final leaderboard when this
 #### Here's what you have to do to get the participation award:
 - Submit a valid entry (see above) 
 - Star this repo
-- Follow Tinybird on Twitter: [@tinybirdco](https://twitter.com/tinybirdco)
-- Optional: Share your submission on Twitter using #stalbnashackathon (tag @tinybirdco too!)
+- Follow Tinybird on Twitter [@tinybirdco](https://twitter.com/tinybirdco) and/or LinkedIn
+- Share your submission on Twitter/LinkedIn using #stalbnashackathon (tag us too!)
 
 ## Need help?
 Join our [Community Slack](https://www.tinybird.co/join-our-slack-community)!
