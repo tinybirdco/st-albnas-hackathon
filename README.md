@@ -23,6 +23,7 @@ The code should repeatably converge as many of the entries as possible into the 
   - A demonstration of the results you achieved (image, file, etc.) that should be repeatable
   - Optional: Include your Twitter handle in your GitHub profile if you'd like to be mentioned on Twitter.
 - Submissions are due by Friday, July 21st at 5 PM GMT
+- Tinybird employees may not participate
 
 ## Scoring
 Aim for [Accuracy (ACC)!](https://en.wikipedia.org/wiki/Accuracy_and_precision#In_binary_classification), measured as (true positives + true negatives) / (all possibilities).
