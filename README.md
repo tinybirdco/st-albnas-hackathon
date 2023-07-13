@@ -37,6 +37,10 @@ Let's be honest, this problem isn't *that* hard, but it should be fun! All you n
 
 Also, as an incentive to score well, we'll tweet the final leaderboard when this ends :).
 
+## Run
+
+Install NodeJS and run `node solution.js`.
+
 #### Here's what you have to do to get the participation award:
 - Submit a valid entry (see above) 
 - Star this repo
