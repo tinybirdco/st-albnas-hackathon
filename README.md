@@ -1,3 +1,13 @@
+# Solution
+I used stackblitz [Jason's solution](https://stackblitz.com/edit/vanilla-js-playground-eda8zz?file=index.js)
+
+Solution doesn't read the text files, just added them as variables instead
+
+## Results
+![image](/tinybirb.png)
+
+
+
 # Tinybird "St. Albnas" Hackathon
 *Clean some data, win some swag*
 
