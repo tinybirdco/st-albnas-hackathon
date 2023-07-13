@@ -1,5 +1,5 @@
-['St. Albans'
-'St. Albans',
+['St. Albans',
+'St.Albans',
 'St Albans',
 'St.Ablans',
 'St.albans',
@@ -9,7 +9,7 @@
 'S. Albnas',
 'St. Albnas',
 'St.Al bans',
-'St.Algans'
+'St.Algans',
 'Sl.Albans',
 'St. Allbans',
 'St, Albans',
