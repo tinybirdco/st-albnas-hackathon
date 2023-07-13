@@ -1,6 +1,6 @@
 ['St. Paul',
  'Albans',
- 'Albna'
+ 'Albna',
  'St. Alberts',
  'Alberta',
  'St. Johnsbury, VT',
