@@ -30,4 +30,4 @@ get_duckdb
 ./duckdb < query.sql
 ```
 
-3. The results are stored in `output.csv`.
+3. The query will output the accuracy and save the results to `output.csv`.
