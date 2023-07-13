@@ -1,0 +1,3 @@
+Number of occurrences of 'St. Albans' in positive file: 17
+Number of occurrences of 'St. Albans' in negative file: 0
+AUC: 1.0
