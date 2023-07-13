@@ -54,4 +54,19 @@ select correct_name(pos.c) as converted, pos.c as original, 'positive' as label 
 
 COPY (SELECT * FROM final_results) TO 'output.csv' (HEADER TRUE);
 
+-- calculate accuracy
+
+CREATE OR REPLACE view accuracy_values AS
+select
+   -- true positives
+   (select count(*) from final_results where label = 'positive' and converted = (select c from objective)) as tp,
+   -- true negatives
+   (select count(*) from final_results where label = 'negative' and converted != (select c from objective)) as tn,
+   -- total
+   (select count(*) from final_results) as total;
+
+
+select ((tp+tn)/total) as accuracy from accuracy_values;
+
+
 
