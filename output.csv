@@ -1,4 +1,20 @@
 converted,original,label
+St. Albans,St. Albans,positive
+St. Albans,St.Albans,positive
+St. Albans,St Albans,positive
+St. Albans,St.Ablans,positive
+St. Albans,St.albans,positive
+St. Albans,St. Alans,positive
+St. Albans,S. Albans,positive
+St. Albans,St.. Albans,positive
+St. Albans,S. Albnas,positive
+St. Albans,St. Albnas,positive
+St. Albans,St.Al bans,positive
+St. Albans,St.Algans,positive
+St. Albans,Sl.Albans,positive
+St. Albans,St. Allbans,positive
+St. Albans,"St, Albans",positive
+St. Albans,St. Alban,positive
 St. Paul,St. Paul,negative
 Albans,Albans,negative
 Albna,Albna,negative
@@ -24,19 +40,3 @@ Peoria,Peoria,negative
 I ran out of ideas,I ran out of ideas,negative
 Albany,Albany,negative
 Alloy,Alloy,negative
-St. Albans,St. Albans,positive
-St. Albans,St.Albans,positive
-St. Albans,St Albans,positive
-St. Albans,St.Ablans,positive
-St. Albans,St.albans,positive
-St. Albans,St. Alans,positive
-St. Albans,S. Albans,positive
-St. Albans,St.. Albans,positive
-St. Albans,S. Albnas,positive
-St. Albans,St. Albnas,positive
-St. Albans,St.Al bans,positive
-St. Albans,St.Algans,positive
-St. Albans,Sl.Albans,positive
-St. Albans,St. Allbans,positive
-St. Albans,"St, Albans",positive
-St. Albans,St. Alban,positive
