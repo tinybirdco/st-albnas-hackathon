@@ -1,0 +1,63 @@
+-------------------------------------------- positives.txt --------------------------------------------
+Original: ['St. Albans',
+Corrected: St. Albans
+-----
+Original: 'St.Albans',
+Corrected: St. Albans
+-----
+Original: 'St Albans',
+Corrected: St. Albans
+-----
+Original: 'St.Ablans',
+Corrected: St. Albans
+-----
+Original: 'St.albans',
+Corrected: St. Albans
+-----
+Original: 'St. Alans',
+Corrected: St. Albans
+-----
+Original: 'S. Albans',
+Corrected: St. Albans
+-----
+Original: 'St.. Albans',
+Corrected: St. Albans
+-----
+Original: 'S. Albnas',
+Corrected: St. Albans
+-----
+Original: 'St. Albnas',
+Corrected: St. Albans
+-----
+Original: 'St.Al bans',
+Corrected: St. Albans
+-----
+Original: 'St.Algans',
+Corrected: St. Albans
+-----
+Original: 'Sl.Albans',
+Corrected: St. Albans
+-----
+Original: 'St. Allbans',
+Corrected: St. Albans
+-----
+Original: 'St, Albans',
+Corrected: St. Albans
+-----
+Original: 'St. Alban',
+Corrected: St. Albans
+-----
+Original: 'St. Alban']
+Corrected: St. Albans
+-----
+------------------- Elements converted: 17 -------------------
+------------------- Elements not converted: 0 -------------------
+
+
+-------------------------------------------- negatives.txt --------------------------------------------
+
+----------------- Elements not converted: 25----------------------
+----------------- Elements converted: 0----------------------
+
+
+--- Accuracy: 100.0% ---
