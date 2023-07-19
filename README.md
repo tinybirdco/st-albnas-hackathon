@@ -38,10 +38,17 @@ Let's be honest, this problem isn't *that* hard, but it should be fun! All you n
 Also, as an incentive to score well, we'll tweet the final leaderboard when this ends :).
 
 #### Here's what you have to do to get the participation award:
-- Submit a valid entry (see above) 
+- Submit a valid entry (see above)
 - Star this repo
 - Follow Tinybird on Twitter [@tinybirdco](https://twitter.com/tinybirdco) and/or LinkedIn
 - Share your submission on Twitter/LinkedIn using #stalbnashackathon (tag us too!)
 
 ## Need help?
 Join our [Community Slack](https://www.tinybird.co/join-our-slack-community)!
+
+## The Solution
+It's a very simple project using Lucene to compare the texts against the canonical "St. Albans" ;) 100% of effectivity without reinventing the wheel XD
+
+![image](/img/the-code.png)
+
+![image](/img/the-results.png)
