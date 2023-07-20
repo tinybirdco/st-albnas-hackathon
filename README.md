@@ -1,47 +1,74 @@
-# Tinybird "St. Albnas" Hackathon
-*Clean some data, win some swag*
+## Foreword
 
-## The Problem
-The "St. Albnas" problem has become quite a meme on the internet. It seems to have originated [here](https://www.linkedin.com/posts/aesroka_management-we-have-great-datasets-the-datasets-activity-7072180991229874176-p8PX/) (h/t to Adam Sroka).
+THANK YOU GUYS!!! I follow you on Twitter/LinkedIn and I am amazed by what you guys are doing. I'm a product manager who started programming as many others... and thanks to your challenge I've had the time and motivation to get back to the IDE... it has made me feel soooo proud of myself (regardless the result, of course) :)))
 
-![image](/img/st-albnas.webp)
+## Solution
 
-The meme captures a well known issue with data quality: Free-text fields aren't consistent!
+I've needed to use chatGPT as you suggested to find a collection of distance calculation algorithms, and I've tried several until I've found the one it fits with the given datasets. I guess there are other algorithms that may be better with larger datasets (in particular Jaro-Winkler is a good candidate, as it considers several different aspects that can be tweaked) but the one that has worked better for me has been Damerau-Levenshtein.
 
-## The Goal
-Write some code (SQL, GPT, regex, whatever you want) that will accurately, precisely, and consistently converge all of the elements in the [`positives.txt`](/positives.txt) file to the correct spelling: `St. Albans`.
+## How to run
 
-The code should repeatably converge as many of the entries as possible into the correct spelling while also avoiding false positives (e.g. you can't just replace the entire string with `St. Albans` everytime by brute force). To ensure that your code avoids false positives, we've included a [`negatives.txt`](/negatives.txt) file. Your code should avoid converting any of these to `St. Albans`.
+Compile the file `StringDistanceCalculator.java`, it takes three parameters, the first is the string you will be comparing to (the reference string, in this case `St.Albans`). The second gets the name of the file which contains the dataset in the given format (it must be in the same folder as the generated java file. The third param is the threshold we will be using to discern whether the calculate similarity scoring (this is, the Damerau-Levenshtein distance) is enoght to be considered positive or negative. To make the given datasets work, it has to be set to `3`.
 
-## The Rules
-- To submit an entry, clone this repo, checkout a new branch, and submit a pull request.
-- Use whatever language you want, whatever libraries you want, whatever. But it must be code and it must compile. (You can use GPT or any other LLM, but simple text GPT prompts will not be accepted!)
-- Any entry that converts the elements by brute force (i.e. by individual string matching) will be rejected.
-- Valid entries must include:
-  - All necessary code to do the data cleansing
-  - A README explaining how to run the code over the included `.txt` files.
-  - A demonstration of the results you achieved (image, file, etc.) that should be repeatable
-  - Optional: Include your Twitter handle in your GitHub profile if you'd like to be mentioned on Twitter.
-- Submissions are due by Friday, July 21st at 5 PM GMT
-- Tinybird employees may not participate
+Thus, after compiling, you have to run the following commands:
 
-## Scoring
-Aim for [Accuracy (ACC)](https://en.wikipedia.org/wiki/Accuracy_and_precision#In_binary_classification), measured as (true positives + true negatives) / (all possibilities).
+`java StringDistanceCalculator.java "St. Albans" positives.txt 3` to check the positives
 
-For example, a submission that accurately converts 15 out of the 17 elements in `positives.txt` and accurately ignores 24 out of the 25 elements in `negatives.txt` would score (15 + 24) / (17 + 25) = 92.8%
+and
 
-Submissions that correctly convert all 17 of the elements in `positives.txt` and none of the 25 elements in `negatives.txt` to `St. Albans` would score a 100%.
+`java StringDistanceCalculator.java "St. Albans" negatives.txt 3` to check the negatives
 
-## Participation Award!
-Let's be honest, this problem isn't *that* hard, but it should be fun! All you need to do is submit a working attempt, and you'll get $20 off at [The Tinyshop](https://shop.tinybird.co). That's enough for a t-shirt, a coffee mug, or 2 sticker sheets!
+For the positives.txt file, you will get the following result:
 
-Also, as an incentive to score well, we'll tweet the final leaderboard when this ends :).
+```
+Input: St. Albans output: St. Albans positive with score: 0.0
+Input: St.Albans output: St. Albans positive with score: 1.0
+Input: St Albans output: St. Albans positive with score: 1.0
+Input: St.Ablans output: St. Albans positive with score: 2.0
+Input: St.albans output: St. Albans positive with score: 2.0
+Input: St. Alans output: St. Albans positive with score: 1.0
+Input: S. Albans output: St. Albans positive with score: 1.0
+Input: St.. Albans output: St. Albans positive with score: 1.0
+Input: S. Albnas output: St. Albans positive with score: 2.0
+Input: St. Albnas output: St. Albans positive with score: 1.0
+Input: St.Al bans output: St. Albans positive with score: 2.0
+Input: St.Algans output: St. Albans positive with score: 2.0
+Input: Sl.Albans output: St. Albans positive with score: 2.0
+Input: St. Allbans output: St. Albans positive with score: 1.0
+Input: St, Albans output: St. Albans positive with score: 1.0
+Input: St. Alban output: St. Albans positive with score: 1.0
+Input: St. Alban output: St. Albans positive with score: 1.0
+Processed 17 inputs resulting in 17 positives and 0 negatives.
+```
 
-#### Here's what you have to do to get the participation award:
-- Submit a valid entry (see above) 
-- Star this repo
-- Follow Tinybird on Twitter [@tinybirdco](https://twitter.com/tinybirdco) and/or LinkedIn
-- Share your submission on Twitter/LinkedIn using #stalbnashackathon (tag us too!)
+For the negatives.txt file, you will get the following result
 
-## Need help?
-Join our [Community Slack](https://www.tinybird.co/join-our-slack-community)!
+```
+Input: St. Paul output: St. Paul negative with score: 5.0
+Input: Albans output: Albans negative with score: 4.0
+Input: Albna output: Albna negative with score: 6.0
+Input: St. Alberts output: St. Alberts negative with score: 3.0
+Input: Alberta output: Alberta negative with score: 8.0
+Input: St. Johnsbury, VT output: St. Johnsbury, VT negative with score: 12.0
+Input: Alban St. output: Alban St. negative with score: 8.0
+Input: State of Alban output: State of Alban negative with score: 7.0
+Input: Albany output: Albany negative with score: 5.0
+Input: Albania output: Albania negative with score: 6.0
+Input: Ban output: Ban negative with score: 8.0
+Input: Alfred output: Alfred negative with score: 8.0
+Input: St. Alfred output: St. Alfred negative with score: 4.0
+Input: Saint output: Saint negative with score: 8.0
+Input: St output: St negative with score: 8.0
+Input: Alps output: Alps negative with score: 7.0
+Input: Alloy output: Alloy negative with score: 8.0
+Input: Alban Street output: Alban Street negative with score: 11.0
+Input: AL output: AL negative with score: 9.0
+Input: Alabama output: Alabama negative with score: 7.0
+Input: Alexa output: Alexa negative with score: 8.0
+Input: Alfonso Soriano output: Alfonso Soriano negative with score: 12.0
+Input: Snabla output: Snabla negative with score: 7.0
+Input: Peoria output: Peoria negative with score: 9.0
+Input: I ran out of ideas output: I ran out of ideas negative with score: 15.0
+Processed 25 inputs resulting in 0 positives and 25 negatives.
+```
+
