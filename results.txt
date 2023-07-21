@@ -1,0 +1,180 @@
+POSITIVES
+---------------
+Data:St. Albans
+Distance: 0
+OK: St. Albans
+---------------
+Data:St.Albans
+Distance: 1
+OK: St. Albans
+---------------
+Data:St Albans
+Distance: 1
+OK: St. Albans
+---------------
+Data:St.Ablans
+Distance: 3
+OK: St. Albans
+---------------
+Data:St.albans
+Distance: 2
+OK: St. Albans
+---------------
+Data:St. Alans
+Distance: 1
+OK: St. Albans
+---------------
+Data:S. Albans
+Distance: 1
+OK: St. Albans
+---------------
+Data:St.. Albans
+Distance: 1
+OK: St. Albans
+---------------
+Data:S. Albnas
+Distance: 3
+OK: St. Albans
+---------------
+Data:St. Albnas
+Distance: 2
+OK: St. Albans
+---------------
+Data:St.Al bans
+Distance: 2
+OK: St. Albans
+---------------
+Data:St.Algans
+Distance: 2
+OK: St. Albans
+---------------
+Data:Sl.Albans
+Distance: 2
+OK: St. Albans
+---------------
+Data:St. Allbans
+Distance: 1
+OK: St. Albans
+---------------
+Data:St Albans
+Distance: 1
+OK: St. Albans
+---------------
+Data:St. Alban
+Distance: 1
+OK: St. Albans
+---------------
+Data:St. Alban
+Distance: 1
+OK: St. Albans
+---------------
+NEGATIVES
+---------------
+Data:St. Paul
+Distance: 5
+NOK!
+---------------
+Data:Albans
+Distance: 4
+NOK!
+---------------
+Data:Albna
+Distance: 6
+NOK!
+---------------
+Data:St. Alberts
+Distance: 3
+OK: St. Albans
+---------------
+Data:Alberta
+Distance: 8
+NOK!
+---------------
+Data:St. Johnsbury VT
+Distance: 11
+NOK!
+---------------
+Data:Alban St.
+Distance: 8
+NOK!
+---------------
+Data:State of Alban
+Distance: 7
+NOK!
+---------------
+Data:Albany
+Distance: 5
+NOK!
+---------------
+Data:Albania
+Distance: 6
+NOK!
+---------------
+Data:Ban
+Distance: 8
+NOK!
+---------------
+Data:Alfred
+Distance: 8
+NOK!
+---------------
+Data:St. Alfred
+Distance: 4
+NOK!
+---------------
+Data:Saint
+Distance: 8
+NOK!
+---------------
+Data:St
+Distance: 8
+NOK!
+---------------
+Data:Alps
+Distance: 7
+NOK!
+---------------
+Data:Alloy
+Distance: 8
+NOK!
+---------------
+Data:Alban Street
+Distance: 11
+NOK!
+---------------
+Data:AL
+Distance: 9
+NOK!
+---------------
+Data:Alabama
+Distance: 7
+NOK!
+---------------
+Data:Alexa
+Distance: 8
+NOK!
+---------------
+Data:Alfonso Soriano
+Distance: 12
+NOK!
+---------------
+Data:Snabla
+Distance: 7
+NOK!
+---------------
+Data:Peoria
+Distance: 9
+NOK!
+---------------
+Data:I ran out of ideas
+Distance: 15
+NOK!
++++++++++++++++++
+All posibilities = 42
++++++++++++++++++
+True positives = 17
++++++++++++++++++
+True negatives = 24
++++++++++++++++++
+ACC = 0.97619
++++++++++++++++++
