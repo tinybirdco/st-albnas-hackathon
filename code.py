@@ -35,9 +35,6 @@ if __name__ == "__main__":
 
     original_classifications = [word[1] for word in WORDS]
     new_classifications = [pair[0] for pair in classification_result]
-    accuracy = accuracy_score(original_classifications, new_classifications)
-
-    print('\nAccuracy:', accuracy)
 
     print('\nResults:')
     print("{:<23} {:<23} {:<23} {:<23}".format(
@@ -46,3 +43,6 @@ if __name__ == "__main__":
     for i, (word, match) in enumerate(WORDS):
         fixed_word = THE_WORD if new_classifications[i] == 'T' else word
         print("{:<23} {:<23} {:<23} {:<23}".format(word, f"[{match}, {new_classifications[i]}]", classification_result[i][1], fixed_word))
+
+    accuracy = accuracy_score(original_classifications, new_classifications)
+    print('\nAccuracy:', accuracy)
