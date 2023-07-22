@@ -94,4 +94,6 @@ python solution.py
 
 ### Output
 
-![image](/img/output.jpg)
+![image](/img/output_1.png)
+![image](/img/output_2.png)
+![image](/img/output_3.png)

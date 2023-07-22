@@ -6,7 +6,7 @@ from jellyfish import jaro_winkler_similarity
 
 def load_data(file_name):
     with open(file_name) as f:
-        words = json.load(f)
+        words = list(set(json.load(f)))
     return words
 
 
