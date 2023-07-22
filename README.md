@@ -1,7 +1,9 @@
 # Tinybird "St. Albnas" Hackathon
 *Clean some data, win some swag*
 
-## The Problem
+<details>
+<summary><h2>The Problem</h2></summary>
+
 The "St. Albnas" problem has become quite a meme on the internet. It seems to have originated [here](https://www.linkedin.com/posts/aesroka_management-we-have-great-datasets-the-datasets-activity-7072180991229874176-p8PX/) (h/t to Adam Sroka).
 
 ![image](/img/st-albnas.webp)
@@ -45,3 +47,51 @@ Also, as an incentive to score well, we'll tweet the final leaderboard when this
 
 ## Need help?
 Join our [Community Slack](https://www.tinybird.co/join-our-slack-community)!
+</details>
+
+## The Solution
+
+A Python script designed to analyze the similarity between words and a target word using the Jaro-Winkler similarity metric. The purpose of this script is to categorize words as either "converted" (similar to the target word) or "ignored" (dissimilar to the target word) based on a predefined similarity threshold. The script reads input data from two txt files, "positives.txt" and "negatives.txt," containing lists of words to be analyzed.
+
+### Prerequisites
+
+1. Python 3: The script requires Python 3 to be installed on your system.
+
+2. Dependencies: Make sure to install the required dependencies using the following command:
+
+```bash
+pip install -r requirements.txt
+```
+
+### Usage
+
+1. Prepare the Data Files:
+   - Create two txt files: "positives.txt" and "negatives.txt."
+   - Each file should contain a list of words (strings) to be compared against a target word.
+
+2. Run the Script:
+   - Open a terminal or command prompt and navigate to the directory containing the script and data files.
+   - Execute the script by running the following command:
+
+```bash
+python solution.py
+```
+
+### Script Functionality
+
+1. `load_data(file_name)`: This function reads a txt file containing a list of words and returns the list as a Python object.
+
+2. `calculate_accuracy()`: This function calculates the accuracy of the word similarity analysis. It computes the ratio of converted positive words and ignored negative words to the total number of positive and negative words. The accuracy is expressed as a percentage and rounded to two decimal places.
+
+3. `display_metrics(metric, metric_name, sort_ascending=True)`: This function displays the analysis results for a given metric in a tabular format using the Pandas library.
+
+4. Main Execution:
+   - The script defines a target word, "St. Albans," and a similarity threshold of 0.85.
+   - The script reads the positive and negative word lists from "positives.txt" and "negatives.txt," respectively.
+   - For each word in the positive list, the script calculates its similarity score using Jaro-Winkler similarity with the target word. If the score is equal to or greater than the threshold, the word is considered a "converted positive"; otherwise, it is an "ignored positive."
+   - For each word in the negative list, the script calculates its similarity score. If the score is less than the threshold, the word is an "ignored negative"; otherwise, it is a "converted negative."
+   - Finally, the script displays the results in tabular format, showing the "converted positives," "ignored positives," "converted negatives," and "ignored negatives." Additionally, it shows the overall accuracy of the word similarity analysis.
+
+### Output
+
+![image](/img/output.jpg)
