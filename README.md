@@ -97,3 +97,10 @@ python solution.py
 ![image](/img/output_1.png)
 ![image](/img/output_2.png)
 ![image](/img/output_3.png)
+
+<details>
+  <summary>Swag 🧢</summary>
+  
+  <img src="swag.png" alt="Image Alt Text" width="50%">
+</details>
+
